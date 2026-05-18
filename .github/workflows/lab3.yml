@@ -13,6 +13,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: printing repo detials
-        run: ls -la
+         run: ls -la
       - name: print specific file
-	run: cat secondfile.txt
+	 run: cat secondfile.txt
