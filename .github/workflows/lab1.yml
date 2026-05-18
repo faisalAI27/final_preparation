@@ -1,0 +1,18 @@
+name: lab 1 - first github action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: print content of txt
+        run: cat firstfile.txt
+
+      - name: print current branch name 
+        run: echo "current current is ${{github.ref_name}}"
+  
