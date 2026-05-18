@@ -1,0 +1,18 @@
+name: CI Workflow
+run-name: "${{ github.actor }} triggered ${{ github.event_name }} on branch ${{ github.head_ref || github.ref_name }}"
+
+on:
+ push:
+  branches:
+   - 'feature/*'
+jobs:
+  branch-control-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: printing repo detials
+        run: ls -la
+      - name: print specific file
+        run: cat firstfile.txt
+
