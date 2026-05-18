@@ -14,4 +14,4 @@ jobs:
       - name: printing repo detials
         run: ls -la
       - name: print specific file
-	  	run: cat second_file.txt
+        run: cat firstfile.txt
